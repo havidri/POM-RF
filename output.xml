@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.1 on win32)" generated="20220314 21:38:49.123" rpa="false" schemaversion="2">
+<suite id="s1" name="Swaglab" source="D:\DOJOBOX\Web Automation\POM-RF\steps\swaglab.robot">
+<kw name="Open Browser Chrome" library="loginKeyword" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220314 21:38:50.130" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220314 21:38:50.129" endtime="20220314 21:38:52.287"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220314 21:38:52.288" endtime="20220314 21:38:52.423"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:50.127" endtime="20220314 21:38:52.424"/>
+</kw>
+<test id="s1-t1" name="I am Login with invalid username and invalid password">
+<kw name="Go To Swaglabs page" library="loginKeyword">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 21:38:52.434" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<status status="PASS" starttime="20220314 21:38:52.433" endtime="20220314 21:38:54.971"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:52.432" endtime="20220314 21:38:54.973"/>
+</kw>
+<kw name="I am inputing invalid Username" library="loginKeyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtUsername}</arg>
+<arg>standard_user1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 21:38:54.977" level="INFO">Typing text 'standard_user1' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20220314 21:38:54.975" endtime="20220314 21:38:55.425"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:54.974" endtime="20220314 21:38:55.425"/>
+</kw>
+<kw name="I am inputing invalid Password" library="loginKeyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtPassword}</arg>
+<arg>secret_sauce1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 21:38:55.429" level="INFO">Typing text 'secret_sauce1' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20220314 21:38:55.428" endtime="20220314 21:38:55.832"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:55.427" endtime="20220314 21:38:55.833"/>
+</kw>
+<kw name="I am click login button" library="loginKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 21:38:55.837" level="INFO">Clicking element 'id:login-button'.</msg>
+<status status="PASS" starttime="20220314 21:38:55.836" endtime="20220314 21:38:56.050"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:55.834" endtime="20220314 21:38:56.052"/>
+</kw>
+<kw name="Massage error Username Password not match" library="loginKeyword">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${errorMessageRequired}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 21:38:56.156" level="INFO">Element '//*[@class="error-button"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 21:38:56.057" endtime="20220314 21:38:56.157"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Epic sadface: Username and password do not match any user in this service</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220314 21:38:56.203" level="INFO">Current page contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<status status="PASS" starttime="20220314 21:38:56.157" endtime="20220314 21:38:56.204"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:56.054" endtime="20220314 21:38:56.205"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:52.424" endtime="20220314 21:38:56.206"/>
+</test>
+<test id="s1-t2" name="I am Login with valid username and invalid password">
+<kw name="Go To Swaglabs page" library="loginKeyword">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 21:38:56.214" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<status status="PASS" starttime="20220314 21:38:56.213" endtime="20220314 21:38:56.714"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:56.212" endtime="20220314 21:38:56.715"/>
+</kw>
+<kw name="I am inputing valid Username" library="loginKeyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtUsername}</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 21:38:56.719" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20220314 21:38:56.718" endtime="20220314 21:38:57.059"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:56.716" endtime="20220314 21:38:57.060"/>
+</kw>
+<kw name="I am inputing invalid Password" library="loginKeyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtPassword}</arg>
+<arg>secret_sauce1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 21:38:57.065" level="INFO">Typing text 'secret_sauce1' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20220314 21:38:57.063" endtime="20220314 21:38:57.395"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:57.062" endtime="20220314 21:38:57.396"/>
+</kw>
+<kw name="I am click login button" library="loginKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 21:38:57.400" level="INFO">Clicking element 'id:login-button'.</msg>
+<status status="PASS" starttime="20220314 21:38:57.399" endtime="20220314 21:38:57.575"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:57.397" endtime="20220314 21:38:57.577"/>
+</kw>
+<kw name="Massage error Username Password not match" library="loginKeyword">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${errorMessageRequired}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 21:38:57.663" level="INFO">Element '//*[@class="error-button"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 21:38:57.579" endtime="20220314 21:38:57.663"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Epic sadface: Username and password do not match any user in this service</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220314 21:38:57.697" level="INFO">Current page contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<status status="PASS" starttime="20220314 21:38:57.664" endtime="20220314 21:38:57.698"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:57.578" endtime="20220314 21:38:57.698"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:56.210" endtime="20220314 21:38:57.700"/>
+</test>
+<test id="s1-t3" name="I am Login with invalid username and valid password">
+<kw name="Go To Swaglabs page" library="loginKeyword">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 21:38:57.708" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<status status="PASS" starttime="20220314 21:38:57.707" endtime="20220314 21:38:58.081"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:57.706" endtime="20220314 21:38:58.082"/>
+</kw>
+<kw name="I am inputing invalid Username" library="loginKeyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtUsername}</arg>
+<arg>standard_user1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 21:38:58.087" level="INFO">Typing text 'standard_user1' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20220314 21:38:58.086" endtime="20220314 21:38:58.440"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:58.084" endtime="20220314 21:38:58.441"/>
+</kw>
+<kw name="I am inputing valid Password" library="loginKeyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtPassword}</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 21:38:58.447" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20220314 21:38:58.446" endtime="20220314 21:38:58.779"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:58.444" endtime="20220314 21:38:58.780"/>
+</kw>
+<kw name="I am click login button" library="loginKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 21:38:58.784" level="INFO">Clicking element 'id:login-button'.</msg>
+<status status="PASS" starttime="20220314 21:38:58.783" endtime="20220314 21:38:58.986"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:58.782" endtime="20220314 21:38:58.987"/>
+</kw>
+<kw name="Massage error Username Password not match" library="loginKeyword">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${errorMessageRequired}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 21:38:59.107" level="INFO">Element '//*[@class="error-button"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 21:38:58.990" endtime="20220314 21:38:59.108"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Epic sadface: Username and password do not match any user in this service</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220314 21:38:59.234" level="INFO">Current page contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<status status="PASS" starttime="20220314 21:38:59.109" endtime="20220314 21:38:59.234"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:58.988" endtime="20220314 21:38:59.235"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:57.703" endtime="20220314 21:38:59.349"/>
+</test>
+<test id="s1-t4" name="I am Login with valid username and empty password">
+<kw name="Go To Swaglabs page" library="loginKeyword">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 21:38:59.358" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<status status="PASS" starttime="20220314 21:38:59.357" endtime="20220314 21:38:59.682"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:59.356" endtime="20220314 21:38:59.683"/>
+</kw>
+<kw name="I am inputing valid Username" library="loginKeyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtUsername}</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 21:38:59.690" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20220314 21:38:59.688" endtime="20220314 21:39:00.035"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:59.686" endtime="20220314 21:39:00.036"/>
+</kw>
+<kw name="I am click login button" library="loginKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 21:39:00.040" level="INFO">Clicking element 'id:login-button'.</msg>
+<status status="PASS" starttime="20220314 21:39:00.039" endtime="20220314 21:39:00.239"/>
+</kw>
+<status status="PASS" starttime="20220314 21:39:00.038" endtime="20220314 21:39:00.240"/>
+</kw>
+<kw name="Message error Password is required" library="loginKeyword">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${errorMessageRequired}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 21:39:00.315" level="INFO">Element '//*[@class="error-button"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 21:39:00.244" endtime="20220314 21:39:00.316"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Epic sadface: Password is required</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220314 21:39:00.362" level="INFO">Current page contains text 'Epic sadface: Password is required'.</msg>
+<status status="PASS" starttime="20220314 21:39:00.316" endtime="20220314 21:39:00.362"/>
+</kw>
+<status status="PASS" starttime="20220314 21:39:00.241" endtime="20220314 21:39:00.363"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:59.353" endtime="20220314 21:39:00.364"/>
+</test>
+<test id="s1-t5" name="I am Login with empty username and empty password">
+<kw name="Go To Swaglabs page" library="loginKeyword">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 21:39:00.373" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<status status="PASS" starttime="20220314 21:39:00.372" endtime="20220314 21:39:00.732"/>
+</kw>
+<status status="PASS" starttime="20220314 21:39:00.371" endtime="20220314 21:39:00.733"/>
+</kw>
+<kw name="I am click login button" library="loginKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 21:39:00.737" level="INFO">Clicking element 'id:login-button'.</msg>
+<status status="PASS" starttime="20220314 21:39:00.736" endtime="20220314 21:39:00.936"/>
+</kw>
+<status status="PASS" starttime="20220314 21:39:00.734" endtime="20220314 21:39:00.937"/>
+</kw>
+<kw name="Message error Username is required" library="loginKeyword">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${errorMessageRequired}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 21:39:01.004" level="INFO">Element '//*[@class="error-button"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 21:39:00.940" endtime="20220314 21:39:01.004"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Epic sadface: Username is required</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220314 21:39:01.052" level="INFO">Current page contains text 'Epic sadface: Username is required'.</msg>
+<status status="PASS" starttime="20220314 21:39:01.005" endtime="20220314 21:39:01.053"/>
+</kw>
+<status status="PASS" starttime="20220314 21:39:00.938" endtime="20220314 21:39:01.053"/>
+</kw>
+<status status="PASS" starttime="20220314 21:39:00.368" endtime="20220314 21:39:01.055"/>
+</test>
+<test id="s1-t6" name="I am Login with valid username and valid password">
+<kw name="Go To Swaglabs page" library="loginKeyword">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 21:39:01.063" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<status status="PASS" starttime="20220314 21:39:01.062" endtime="20220314 21:39:01.359"/>
+</kw>
+<status status="PASS" starttime="20220314 21:39:01.061" endtime="20220314 21:39:01.360"/>
+</kw>
+<kw name="I am inputing valid Username" library="loginKeyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtUsername}</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 21:39:01.366" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20220314 21:39:01.364" endtime="20220314 21:39:01.706"/>
+</kw>
+<status status="PASS" starttime="20220314 21:39:01.362" endtime="20220314 21:39:01.707"/>
+</kw>
+<kw name="I am inputing valid Password" library="loginKeyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtPassword}</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 21:39:01.711" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20220314 21:39:01.709" endtime="20220314 21:39:02.039"/>
+</kw>
+<status status="PASS" starttime="20220314 21:39:01.708" endtime="20220314 21:39:02.040"/>
+</kw>
+<kw name="I am click login button" library="loginKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 21:39:02.046" level="INFO">Clicking element 'id:login-button'.</msg>
+<status status="PASS" starttime="20220314 21:39:02.044" endtime="20220314 21:39:02.415"/>
+</kw>
+<status status="PASS" starttime="20220314 21:39:02.042" endtime="20220314 21:39:02.416"/>
+</kw>
+<kw name="Dashboard page will be appears on the screen" library="loginKeyword">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${dashboardPage}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 21:39:02.539" level="INFO">Element '//*[@class="title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 21:39:02.420" endtime="20220314 21:39:02.539"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${dashboardPage}</arg>
+<arg>PRODUCTS</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 21:39:02.627" level="INFO">Element '//*[@class="title"]' contains text 'PRODUCTS'.</msg>
+<status status="PASS" starttime="20220314 21:39:02.540" endtime="20220314 21:39:02.628"/>
+</kw>
+<status status="PASS" starttime="20220314 21:39:02.418" endtime="20220314 21:39:02.629"/>
+</kw>
+<status status="PASS" starttime="20220314 21:39:01.058" endtime="20220314 21:39:02.630"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220314 21:39:02.636" endtime="20220314 21:39:04.966"/>
+</kw>
+<status status="PASS" starttime="20220314 21:38:49.129" endtime="20220314 21:39:04.966"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Swaglab">Swaglab</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

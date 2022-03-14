@@ -1,0 +1,6 @@
+txtUsername: id:user-name
+txtPassword: id:password
+btnLogin: id:login-button
+errorMessage: //h3[@data-test="error"]
+errorMessageRequired: //*[@class="error-button"]
+dashboardPage: //*[@class="title"]
